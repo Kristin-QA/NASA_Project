@@ -1,0 +1,2043 @@
+{
+	"info": {
+		"_postman_id": "a237c31c-2cc3-4040-8780-2f422e4a166b",
+		"name": "PetStore ( USER )",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Positive Tests",
+			"item": [
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"7\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 7,\n  \"username\": \"Ann77\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by user name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"id\");",
+									"    pm.expect(pm.response.text()).to.include(\"username\");",
+									"    pm.expect(pm.response.text()).to.include(\"firstName\");",
+									"    pm.expect(pm.response.text()).to.include(\"lastName\");",
+									"    pm.expect(pm.response.text()).to.include(\"email\");",
+									"    pm.expect(pm.response.text()).to.include(\"password\");",
+									"     pm.expect(pm.response.text()).to.include(\"phone\");",
+									"      pm.expect(pm.response.text()).to.include(\"userStatus\");",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(7);",
+									"    pm.expect(jsonData.username).to.eql(\"Ann77\");",
+									"    pm.expect(jsonData.firstName).to.eql(\"Ann\");",
+									"    pm.expect(jsonData.lastName).to.eql(\"Lee\");",
+									"   ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann77",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"7\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 7,\n  \"username\": \"Ann88\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann77\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann77\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by user name (after PUT)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"id\");",
+									"    pm.expect(pm.response.text()).to.include(\"username\");",
+									"    pm.expect(pm.response.text()).to.include(\"firstName\");",
+									"    pm.expect(pm.response.text()).to.include(\"lastName\");",
+									"    pm.expect(pm.response.text()).to.include(\"email\");",
+									"    pm.expect(pm.response.text()).to.include(\"password\");",
+									"     pm.expect(pm.response.text()).to.include(\"phone\");",
+									"      pm.expect(pm.response.text()).to.include(\"userStatus\");",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.eql(7);",
+									"    pm.expect(jsonData.username).to.eql(\"Ann88\");",
+									"    pm.expect(jsonData.firstName).to.eql(\"Ann\");",
+									"    pm.expect(jsonData.lastName).to.eql(\"Lee\");",
+									"   ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann88",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"Ann88\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann88",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify user was deleted by user name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"   ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(1);",
+									"    pm.expect(jsonData.type).to.eql(\"error\");",
+									"    pm.expect(jsonData.message).to.eql(\"User not found\");",
+									"   ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(1);",
+									"    pm.expect(jsonData.type).to.eql(\"error\");",
+									"    pm.expect(jsonData.message).to.eql(\"User not found\");",
+									"   ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann88",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User where ID is Min value",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"1\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"username\": \"Ann88\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Min Value",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann88",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID is Min value",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"username\": \"Ann11\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann77\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann77\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by user name (after PUT)  where ID is Min Value",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann11",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by user nsme where ID is Min value",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann11",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify user was deleted by user name where ID is Min Value",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ann11",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ann11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User where ID is Min Value+1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"2\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 2,\n  \"username\": \"Ben77\",\n  \"firstName\": \"Ben\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Min Value+1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ben77",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ben77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID is Min value+1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 2,\n  \"username\": \"Ben22\",\n  \"firstName\": \"Ben\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ben77\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ben77\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user (after PUT)  by User Name where ID is Min Value+1 Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ben22",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ben22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by user nsme where ID is Min value+1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ben22",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ben22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify user was deleted by user name where ID is Min Value+1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Ben22",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Ben22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User where ID is Max Value",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"9223372036854775807\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 9223372036854775807,\n  \"username\": \"Joe1\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Max Value",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Joe1",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Joe1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID is Max Value",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":9223372036854775807,\n  \"username\": \"Joe77\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Joe1\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Joe1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user (after Put) by User Name where ID is Max Value Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Joe77",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Joe77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by user nsme where ID is Min value+1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Joe77",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Joe77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User where ID is Max Value -1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(200);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"9223372036854775806\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 9223372036854775806,\n  \"username\": \"Mia1\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Max Value -1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Mia1",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Mia1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID is Max value-1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":9223372036854775806,\n  \"username\": \"Mia99\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Mia1\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Mia1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user (after Put) by User Name where ID is Max Value -1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Mia99",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Mia99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by user nsme where ID is Min value-1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Mia99",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Mia99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify user was deleted by user name where ID is Min Value-1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Mia99",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Mia99"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative Tests",
+			"item": [
+				{
+					"name": "Create User where ID is Max Value+1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(500);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"something bad happened\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":9223372036854775808,\n  \"username\": \"Rik1\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 2147483648\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Max Value+1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"   ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(1);",
+									"    pm.expect(jsonData.type).to.eql(\"error\");",
+									"    pm.expect(jsonData.message).to.eql(\"User not found\");",
+									"   ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Rik1",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Rik1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID is Max Value+1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(500);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"something bad happened\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 9223372036854775808,\n  \"username\": \"Rik2\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 2147483648\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Rik1\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Rik1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Max Value+1 Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(1);",
+									"    pm.expect(jsonData.type).to.eql(\"error\");",
+									"    pm.expect(jsonData.message).to.eql(\"User not found\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Rik2",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Rik2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user where ID is Max Value+1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Length\", \"0\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Rik2",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Rik2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User where ID is Negative Value (-1)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(500);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"something bad happened\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": -1,\n  \"username\": \"Bob1\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 2147483648\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is Negative Value (-1)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Bob1",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Bob1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID is Negative Value (-1)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": -1,\n  \"username\": \"Bob2\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 2147483648\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Bob1\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Bob1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user  (after PUT) by User Name where ID Negative Value (-1)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Bob2",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Bob2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user where ID is Negative Value (-1)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Bob2",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Bob2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User where ID is \"StringID\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Response size is less than 2KB\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(2048);",
+									"});",
+									"",
+									"pm.test(\"Body has all keys\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"    pm.expect(pm.response.text()).to.include(\"type\");",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"    ",
+									"});",
+									"",
+									"pm.test(\"Header is correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+									"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+									"});",
+									"",
+									"pm.test(\"Response Body Key/Value is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(500);",
+									"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+									"    pm.expect(jsonData.message).to.eql(\"something bad happened\");",
+									"   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":\"aaa\",\n  \"username\": \"Aaa1\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 2147483648\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by User Name where ID is \"StringID\"",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Aaa1",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Aaa1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user where ID  is \"StringID\"",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":\"bbb\",\n  \"username\": \"Aaa2\",\n  \"firstName\": \"Ann\",\n  \"lastName\": \"Lee\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 2147483648\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Aaa1\n",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Aaa1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user (after PUT)  by User Name where ID is \"StringID\"",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Aaa2",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Aaa2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user where ID is \"StringID\"",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Aaa2",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Aaa2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

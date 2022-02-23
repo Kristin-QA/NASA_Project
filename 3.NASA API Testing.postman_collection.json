@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "368f99d1-a87c-4bd6-91b9-209190e615c7",
+		"name": "NASA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TLE API: Endpoint 1 Accessibility (http://tle.ivanstanojevic.me/api/tle?search={q})",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Response size is less than 2000kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(2000);",
+							"});",
+							"pm.test(\"Body has all keys\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"@context\");",
+							"    pm.expect(pm.response.text()).to.include(\"@id\");",
+							"    pm.expect(pm.response.text()).to.include(\"@type\");",
+							"    pm.expect(pm.response.text()).to.include(\"totalItems\");",
+							"    pm.expect(pm.response.text()).to.include(\"member\");",
+							"    pm.expect(pm.response.text()).to.include(\"parameters\");",
+							"    pm.expect(pm.response.text()).to.include(\"search\");",
+							"    pm.expect(pm.response.text()).to.include(\"sort\");",
+							"    pm.expect(pm.response.text()).to.include(\"sort-dir\");",
+							"    pm.expect(pm.response.text()).to.include(\"page\");",
+							"    pm.expect(pm.response.text()).to.include(\"page-size\");",
+							"",
+							"});",
+							"",
+							"",
+							"    ",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://tle.ivanstanojevic.me/api/tle?search={q}",
+					"protocol": "http",
+					"host": [
+						"tle",
+						"ivanstanojevic",
+						"me"
+					],
+					"path": [
+						"api",
+						"tle"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "{q}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TLE API: Endpoint 2 Accessibility (http://tle.ivanstanojevic.me)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Response size is less than 2000kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://tle.ivanstanojevic.me",
+					"protocol": "http",
+					"host": [
+						"tle",
+						"ivanstanojevic",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asteroids - NeoWs: Browse the overall Asteroid data-set",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Response size is less than 2000kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=Yk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"neo",
+						"rest",
+						"v1",
+						"neo",
+						"browse"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "Yk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asteroids - NeoWs:  Response  Status Code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Response size is less than 2000kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Yk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.nasa.gov/?=#:~:text=https%3A//api.nasa.gov/neo/rest/v1/feed%3Fstart_date%3D2015%2D09%2D07%26end_date%3D2015%2D09%2D08%26api_key%3DYk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"hash": ":~:text=https%3A//api.nasa.gov/neo/rest/v1/feed%3Fstart_date%3D2015%2D09%2D07%26end_date%3D2015%2D09%2D08%26api_key%3DYk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Earth: Response Time",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Response size is less than 2000kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&date=2014-02-01&api_key=Yk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"earth",
+						"imagery"
+					],
+					"query": [
+						{
+							"key": "lon",
+							"value": "100.75"
+						},
+						{
+							"key": "lat",
+							"value": "1.5"
+						},
+						{
+							"key": "date",
+							"value": "2014-02-01"
+						},
+						{
+							"key": "api_key",
+							"value": "Yk7bUB7UqjVYtX1OGp10XI13uEx0lttWBVAgMvOS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TLE API:  Response Size",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Response size is less than 2000kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://tle.ivanstanojevic.me",
+					"protocol": "http",
+					"host": [
+						"tle",
+						"ivanstanojevic",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

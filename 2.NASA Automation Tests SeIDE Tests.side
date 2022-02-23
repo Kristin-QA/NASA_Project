@@ -1,0 +1,1636 @@
+{
+  "id": "af7a41a4-0d65-4161-bf9a-58f0ae56fe6d",
+  "version": "2.0",
+  "name": "NASA Project Automation Tests",
+  "url": "https://www.nasa.gov",
+  "tests": [{
+    "id": "0eaea819-3247-40ff-8099-4b733f39ca0e",
+    "name": "\"Search\"field functionality",
+    "commands": [{
+      "id": "0c75203d-6246-46a2-83aa-26dc211a1402",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26ea06c3-f3bf-42ba-86b4-7c5404c82588",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "013c4d37-a15f-4299-93b5-bb105a2b055c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e70778d2-5f35-45a0-82d9-3784d8af7879",
+      "comment": "",
+      "command": "click",
+      "target": "id=ember24",
+      "targets": [
+        ["id=ember24", "id"],
+        ["name=query", "name"],
+        ["css=#ember24", "css:finder"],
+        ["xpath=//input[@id='ember24']", "xpath:attributes"],
+        ["xpath=//form[@id='ember23']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0433d1eb-23ed-4625-bd05-4c39ecccc81c",
+      "comment": "",
+      "command": "type",
+      "target": "id=ember24",
+      "targets": [
+        ["id=ember24", "id"],
+        ["name=query", "name"],
+        ["css=#ember24", "css:finder"],
+        ["xpath=//input[@id='ember24']", "xpath:attributes"],
+        ["xpath=//form[@id='ember23']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Events"
+    }, {
+      "id": "ba3708a5-278d-4ee2-a98c-5b30f21f226e",
+      "comment": "",
+      "command": "click",
+      "target": "id=ember27",
+      "targets": [
+        ["id=ember27", "id"],
+        ["css=#ember27", "css:finder"],
+        ["xpath=//input[@id='ember27']", "xpath:attributes"],
+        ["xpath=//form[@id='ember23']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa32f354-4bf3-41d0-a4df-07a09e4e494c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=NASA, Smithsonian Host 10-Year Mars Rover Events",
+      "targets": [
+        ["linkText=NASA, Smithsonian Host 10-Year Mars Rover Events", "linkText"],
+        ["css=#result-1 a", "css:finder"],
+        ["xpath=//div[@id='result-1']/h4/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.jpl.nasa.gov/news/nasa-smithsonian-host-10-year-mars-rover-events')]", "xpath:href"],
+        ["xpath=//div[3]/div/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'NASA, Smithsonian Host 10-Year Mars Rover Events')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c20f0ff-2e18-4844-86a1-61bbf4aa9225",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//*[@id=\"result-4\"]/h4/a/strong",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc46d52c-3730-46e7-bb23-51319c0bf51f",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1 > img",
+      "targets": [
+        ["css=h1 > img", "css:finder"],
+        ["xpath=//img[@alt='NASA logo']", "xpath:img"],
+        ["xpath=//div[@id='header-logo-wrapper']/div/a/h1/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd2c35b5-da6e-4c57-8b74-055f54304611",
+      "comment": "",
+      "command": "click",
+      "target": "id=ember24",
+      "targets": [
+        ["id=ember24", "id"],
+        ["name=query", "name"],
+        ["css=#ember24", "css:finder"],
+        ["xpath=//input[@id='ember24']", "xpath:attributes"],
+        ["xpath=//form[@id='ember23']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1846450e-f32a-485b-8555-8dddb3adbcfa",
+      "comment": "",
+      "command": "type",
+      "target": "id=ember24",
+      "targets": [
+        ["id=ember24", "id"],
+        ["name=query", "name"],
+        ["css=#ember24", "css:finder"],
+        ["xpath=//input[@id='ember24']", "xpath:attributes"],
+        ["xpath=//form[@id='ember23']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " "
+    }, {
+      "id": "581877ef-b4d1-45c2-a5f8-28efd6e8c188",
+      "comment": "",
+      "command": "click",
+      "target": "id=ember27",
+      "targets": [
+        ["id=ember27", "id"],
+        ["css=#ember27", "css:finder"],
+        ["xpath=//input[@id='ember27']", "xpath:attributes"],
+        ["xpath=//form[@id='ember23']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e543b1f2-143b-4be7-8e5a-2c5d2bf0af21",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7441f173-131a-4e41-b620-505ccf2f2851",
+    "name": "Logo functionality",
+    "commands": [{
+      "id": "9b9b8f70-4150-4e1f-bab8-fbb9df11ce97",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38205041-967e-446f-a381-ea4fce93983c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "121d3558-4421-4ae1-b2f4-0646c2170d5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db8b81c7-fc0f-4d97-9804-3684877e1511",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Humans in Space",
+      "targets": [
+        ["linkText=Humans in Space", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Humans in Space')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/humans-in-space')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Humans in Space')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc988dcd-02fd-481a-a2b9-715f1f5e8def",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2a44895-f91e-47a3-bc63-37711fb93084",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "73e64ca7-3cd9-479f-8c5d-8d2b2a31a275",
+    "name": "Header's Links functionality",
+    "commands": [{
+      "id": "904f6d14-914c-45de-a99d-8672fdacc898",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16216a67-d041-4958-b09e-4a5c88ce2835",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f2a338a-9a00-408d-bfe0-e17e8f49ca52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82abc567-660c-405a-baa4-2d484e7e6ff2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Humans in Space",
+      "targets": [
+        ["linkText=Humans in Space", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Humans in Space')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/humans-in-space')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Humans in Space')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41412385-4c5c-4891-b585-ddc1566b9dec",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//*[@id=\"landing-page-banner\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae19f5e3-c01f-4079-8dd2-1cfea7f43975",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94982f66-e7ea-4da4-8f5c-300a072a69a5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Moon to Mars",
+      "targets": [
+        ["linkText=Moon to Mars", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Moon to Mars')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/moon-to-mars/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Moon to Mars')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "308c8bca-a49c-4167-8607-a9b9362dd322",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//*[@id=\"landing-page-banner\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2204fa7a-93b9-4fc5-ac05-264b5afd84c4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#ember40 > .bg-card-canvas",
+      "targets": [
+        ["css=#ember40 > .bg-card-canvas", "css:finder"],
+        ["xpath=//a[@id='ember40']/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div", "xpath:position"]
+      ],
+      "value": "image"
+    }, {
+      "id": "ca2a49fc-b529-49a2-98c0-5a28f628356c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6daf670-5d72-4616-80af-26069afddaa1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Earth",
+      "targets": [
+        ["linkText=Earth", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Earth')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/earth/index.html')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Earth')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb68990e-ede2-42aa-b9eb-62b8c3db5134",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=landing-page-banner",
+      "targets": [
+        ["id=landing-page-banner", "id"],
+        ["css=#landing-page-banner", "css:finder"],
+        ["xpath=//div[@id='landing-page-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='ember31']/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e98fb2d3-a2e2-42cc-84ef-b0c39d72ba6a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.logo:nth-child(2)",
+      "targets": [
+        ["css=.logo:nth-child(2)", "css:finder"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d17d43aa-f2f2-4760-8fc6-0d7868ee0639",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.logo:nth-child(2)",
+      "targets": [
+        ["css=.logo:nth-child(2)", "css:finder"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2156c941-a7c6-46b4-b005-12240389d370",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "253d7085-c7e4-466b-a645-ce7ac265f9f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Space Tech",
+      "targets": [
+        ["linkText=Space Tech", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Space Tech')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/technology/index.html')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Space Tech')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1083545b-54ff-4787-b4a6-575dbc54c455",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=landing-page-banner",
+      "targets": [
+        ["id=landing-page-banner", "id"],
+        ["css=#landing-page-banner", "css:finder"],
+        ["xpath=//div[@id='landing-page-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='ember34']/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4621cfe-92f8-44fc-b276-39f83a52cf7d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@id='ember56']/div",
+      "targets": [
+        ["css=#ember56 > .bg-card-canvas", "css:finder"],
+        ["xpath=//a[@id='ember56']/div", "xpath:idRelative"],
+        ["xpath=//a[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93802e97-3fdb-4cb8-99ce-c9cae3fa1444",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35771f4c-6bd8-49d8-9d4a-90590d5893bb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Flight",
+      "targets": [
+        ["linkText=Flight", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Flight')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/aeronautics/index.html')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Flight')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31fd8d97-5d21-4ae5-8d78-41fa50cef86d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=landing-page-banner",
+      "targets": [
+        ["id=landing-page-banner", "id"],
+        ["css=#landing-page-banner", "css:finder"],
+        ["xpath=//div[@id='landing-page-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='ember37']/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c29913e-2c60-4834-9ef9-f6ee69cc144a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7efe0b39-ed86-4183-b76a-422b023f6166",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Solar System and Beyond",
+      "targets": [
+        ["linkText=Solar System and Beyond", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Solar System and Beyond')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/solarsystem/index.html')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Solar System and Beyond')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43a5c1db-aa07-438e-a33c-8cf22a9bd66b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=landing-page-banner",
+      "targets": [
+        ["id=landing-page-banner", "id"],
+        ["css=#landing-page-banner", "css:finder"],
+        ["xpath=//div[@id='landing-page-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='ember32']/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "303eb18a-3ca4-4d7b-b31c-258bbdfa5b6f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@id='ember288']/div",
+      "targets": [
+        ["css=#ember288 > .bg-card-canvas", "css:finder"],
+        ["xpath=//a[@id='ember288']/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b4172ce-fd43-4d26-abcd-48cc8129a3ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5654bd9e-660e-4fda-a89a-30d81754fe46",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=STEM Engagement",
+      "targets": [
+        ["linkText=STEM Engagement", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(7) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'STEM Engagement')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/stem')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'STEM Engagement')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2e1c132-789c-46b6-a773-420f2f8a0471",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.edu-feed-banner__img",
+      "targets": [
+        ["css=.edu-feed-banner__img", "css:finder"],
+        ["xpath=//div[@id='ember20']/div/div/img", "xpath:idRelative"],
+        ["xpath=//div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c639d333-f9cc-4797-8a1f-7849ffb46c08",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//img[@alt='NASA logo']",
+      "targets": [
+        ["css=#ember550 .node-hero__image", "css:finder"],
+        ["xpath=//img[@alt='NASA logo']", "xpath:img"],
+        ["xpath=//div[@id='ember550']/div/a/img", "xpath:idRelative"],
+        ["xpath=//div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba408a65-b152-47e6-9311-033df3d9d291",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9fbf4c6-9cb9-4e98-b305-376a98e7754c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=History",
+      "targets": [
+        ["linkText=History", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(8) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'History')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/history/index.html')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'History')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "694584d0-5e5b-4f55-8b12-e34cd79ee59c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=landing-page-banner",
+      "targets": [
+        ["id=landing-page-banner", "id"],
+        ["css=#landing-page-banner", "css:finder"],
+        ["xpath=//div[@id='landing-page-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='ember27']/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d11c0833-657b-4a52-b478-cfc6551480a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "135f1e6b-fe38-4ccc-a000-45d192f6a0a8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Benefits to You",
+      "targets": [
+        ["linkText=Benefits to You", "linkText"],
+        ["css=.dropdown:nth-child(1) li:nth-child(9) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Benefits to You')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/topics/benefits/index.html')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Benefits to You')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "922294eb-08a5-4885-abaa-4797fabae529",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=landing-page-banner",
+      "targets": [
+        ["id=landing-page-banner", "id"],
+        ["css=#landing-page-banner", "css:finder"],
+        ["xpath=//div[@id='landing-page-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='ember30']/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bce222ee-0cd9-4788-8d43-565e67cc6532",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#ember46 > .bg-card-canvas",
+      "targets": [
+        ["css=#ember46 > .bg-card-canvas", "css:finder"],
+        ["xpath=//a[@id='ember46']/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47fa6832-cc1a-424d-8d8a-b3a0e69bb7ed",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d6372e6-62c2-47c7-8ff8-f46066c35932",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3fbe8fd-477c-4f19-9320-07d4d553e0ac",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "556bd59f-bbf8-4659-a42f-e0ae13c86a88",
+    "name": "Social Media Links activity",
+    "commands": [{
+      "id": "3370a881-68a7-4ae3-91cc-3cf3d64e1fbc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9920e3ac-9fba-4678-b5a6-3dd5047ae749",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3778ee97-851e-478d-b1b1-735e7f228b32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f553184a-6639-4ae1-89e4-857886ab106b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(5) span:nth-child(1)",
+      "targets": [
+        ["css=.dropdown:nth-child(5) span:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='nasa-main-menu']/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Follow NASA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1abc95ac-14ac-462b-a975-953ce6dc59d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(5) span:nth-child(1)",
+      "targets": [
+        ["css=.dropdown:nth-child(5) span:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='nasa-main-menu']/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Follow NASA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "508c5307-0063-4d8b-bfec-0517a6d9c8d3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//ul[@id='nasa-main-menu']/li[5]/ul/li[6]/a",
+      "targets": [
+        ["linkText=Social Media", "linkText"],
+        ["css=.dropdown:nth-child(5) li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Social Media')]", "xpath:link"],
+        ["xpath=//ul[@id='nasa-main-menu']/li[5]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/socialmedia')]", "xpath:href"],
+        ["xpath=//li[5]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Social Media')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f8a607e-9687-431a-a36c-9e9e0bd2070e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-facebook",
+      "targets": [
+        ["css=.at-icon-facebook", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6785",
+      "windowTimeout": 2000
+    }, {
+      "id": "6084c6f1-1301-4c6b-a7ee-ca0369252505",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8af5e46a-4316-49be-88a5-5e920b405104",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6785}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40e025c9-fcb0-430d-82b0-88e92db04f3c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.jllm4f4h",
+      "targets": [
+        ["css=.jllm4f4h", "css:finder"],
+        ["xpath=//div[@id='mount_0_0_XE']/div/div/div/div[3]/div/div/div/div[2]/div/div/div/div[2]/div/div[3]/div/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b30f045b-4664-478b-9667-bea6cf00a924",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e592e6c4-7040-431d-9d30-4e6131e2f0e0",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c173e997-f192-4eca-b189-d26fdbf80c45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-twitter path",
+      "targets": [
+        ["css=.at-icon-twitter path", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9853",
+      "windowTimeout": 2000
+    }, {
+      "id": "124afb1b-5f8c-4910-80e3-4b9177b1c234",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win9853}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e7f7f80-239c-4475-b900-212cb5790571",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-18t94o4:nth-child(1) > .css-901oao > .css-901oao > .css-901oao > .css-901oao",
+      "targets": [
+        ["css=.css-18t94o4:nth-child(1) > .css-901oao > .css-901oao > .css-901oao > .css-901oao", "css:finder"],
+        ["xpath=//div[@id='layers']/div[2]/div/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/span/span/span", "xpath:idRelative"],
+        ["xpath=//span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "251340fc-5f4c-4a70-a391-5afecc678559",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-16y2uox > g > path",
+      "targets": [
+        ["css=.r-16y2uox > g > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "234ce8aa-a07e-4cc7-aaec-302b72403d4c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d334e64a-bebe-4f97-bab2-a67b0dfab1a0",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5330bd4-6046-476a-99aa-9139fd7e6707",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-instagram",
+      "targets": [
+        ["css=.at-icon-instagram", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7704",
+      "windowTimeout": 2000
+    }, {
+      "id": "ae5f677f-e12d-475f-8953-bde934881bfa",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7704}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d78f796-94ef-4d7f-93ca-07c1bf2cdb2a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdc31330-9a07-4a87-9770-8401cc19fc0b",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7a7b0f6-913e-4606-9eb7-476cfd4ee503",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-snapchat path",
+      "targets": [
+        ["css=.at-icon-snapchat path", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7497",
+      "windowTimeout": 2000
+    }, {
+      "id": "737b9108-996c-4cb4-9ce6-ea75d2d44b1a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7497}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7df244a-ba83-4320-a9ac-dbfdc0c5aa2f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb8b9e35-30b9-4ea5-a878-e21b1e2d153b",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cab31b32-d22b-48df-b263-d46dbbea75e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-youtube",
+      "targets": [
+        ["css=.at-icon-youtube", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6194",
+      "windowTimeout": 2000
+    }, {
+      "id": "012a4ac5-aa5d-48bf-a562-c36894eddd66",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6194}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd1fbdcb-3182-4cc6-85c4-dfd7baa00d81",
+      "comment": "",
+      "command": "click",
+      "target": "id=logo-icon",
+      "targets": [
+        ["id=logo-icon", "id"],
+        ["css=#logo > #logo .ytd-topbar-logo-renderer > #logo-icon", "css:finder"],
+        ["xpath=//yt-icon[@id='logo-icon']", "xpath:attributes"],
+        ["xpath=//a[@id='logo']/div/ytd-logo/yt-icon", "xpath:idRelative"],
+        ["xpath=//ytd-logo/yt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08c24d44-94d5-4055-aa10-cbf273cb63e8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9486e9a8-5b62-4f38-955b-9365c047a7da",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a2a50ae-3326-4b62-b4ef-85639a166110",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-tumblr",
+      "targets": [
+        ["css=.at-icon-tumblr", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3331",
+      "windowTimeout": 2000
+    }, {
+      "id": "ad30238b-8d3e-448a-a68f-505476c1f391",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3331}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97c7cd28-e278-4ab8-a854-dcd89a2b65b1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9f4d8c1-7f7e-4c37-8e61-667a8a7149d7",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "283204a9-2578-4ff3-8c47-a4a86958c282",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-flickr",
+      "targets": [
+        ["css=.at-icon-flickr", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win551",
+      "windowTimeout": 2000
+    }, {
+      "id": "af8dde93-1b81-471b-b2f1-8002e990e6c3",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win551}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6900cbdf-a6f8-4f6d-b4c9-e7038ffc8e20",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cfdfa07-7af7-4bd3-ba5f-8ce1f9e7451b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82674f4a-1263-4a0b-a733-53b0e000216c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27fe4506-c8c6-40f6-9108-55a6a2badc52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-pinterest_share",
+      "targets": [
+        ["css=.at-icon-pinterest_share", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5965",
+      "windowTimeout": 2000
+    }, {
+      "id": "e57a7c35-27bc-4b03-8c8f-943ce910ce50",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5965}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f76730a0-0e2e-4b3a-accd-e57419ee5d8d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5468ed4-4c70-4cd6-a431-9575f10c6e21",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "026da1ab-71b4-427a-91ae-0ed4b402a9d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-linkedin",
+      "targets": [
+        ["css=.at-icon-linkedin", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7835",
+      "windowTimeout": 2000
+    }, {
+      "id": "e2e6fbef-f6f8-4664-a355-6adbb0b88993",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7835}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64e4d3d3-2d80-4e34-8a10-6b4161517ed6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de09631e-618a-48ba-afc1-b7b6cad6714e",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "337935be-481e-4240-b82b-afc6bebd22ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-soundcloud path",
+      "targets": [
+        ["css=.at-icon-soundcloud path", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3579",
+      "windowTimeout": 2000
+    }, {
+      "id": "17434459-c9d0-40b0-bbd1-e1cc28c16c3a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3579}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a55f3f9-eb33-48af-8b09-92aed558e424",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=SoundCloud",
+      "targets": [
+        ["linkText=SoundCloud", "linkText"],
+        ["css=.header__logoLink-wordmark", "css:finder"],
+        ["xpath=(//a[contains(text(),'SoundCloud')])[2]", "xpath:link"],
+        ["xpath=//div[@id='app']/header/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9310e897-a783-4406-8f8d-ea3a99838ba1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=SoundCloud",
+      "targets": [
+        ["linkText=SoundCloud", "linkText"],
+        ["css=.header__logoLink-wordmark", "css:finder"],
+        ["xpath=(//a[contains(text(),'SoundCloud')])[2]", "xpath:link"],
+        ["xpath=//div[@id='app']/header/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56fb5cbd-a70a-45ea-8e0f-c562918a29f8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=SoundCloud",
+      "targets": [
+        ["linkText=SoundCloud", "linkText"],
+        ["css=.header__logoLink-wordmark", "css:finder"],
+        ["xpath=(//a[contains(text(),'SoundCloud')])[2]", "xpath:link"],
+        ["xpath=//div[@id='app']/header/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce55308b-03b3-4f8f-898a-419b24cc9b56",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2b404b1-6570-4d77-8f6b-3a1bbf96a28a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2a0455f-4dcd-4323-b2ae-fa7f0252b5eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-twitch",
+      "targets": [
+        ["css=.at-icon-twitch", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4566",
+      "windowTimeout": 2000
+    }, {
+      "id": "d2918929-fe5b-4d61-9bff-38a6b50aa6b4",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4566}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa311667-cc2e-42c6-aea6-d073ae1b42af",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c659b586-4704-4fa8-9c4d-8c95d6f5be18",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca9552fc-3ef8-472d-a74f-f6536b2173df",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.ScFace-sc-cdc1ai-4",
+      "targets": [
+        ["css=.ScFace-sc-cdc1ai-4", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3724b54-aac1-4901-816b-2874589cb1ec",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=g:nth-child(1) > .ScBody-sc-cdc1ai-3",
+      "targets": [
+        ["css=g:nth-child(1) > .ScBody-sc-cdc1ai-3", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cb70188-c8ff-46ba-af36-0f93af69d1eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ScSvg-sc-cdc1ai-2 > g",
+      "targets": [
+        ["css=.ScSvg-sc-cdc1ai-2 > g", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dea2d1d-a70c-41f9-b6ea-0b106716b703",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28800a77-b484-471a-bac6-5a2f552edb5f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "191620cf-35e8-418e-a411-e5649e96920c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcf77926-961e-4c47-aefb-b0a88521bc5a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b55b892b-d1dc-4dd8-98a0-e80c157731c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.at-icon-reddit",
+      "targets": [
+        ["css=.at-icon-reddit", "css:finder"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7400",
+      "windowTimeout": 2000
+    }, {
+      "id": "aac4e38c-f9c8-4a10-b72b-4aea99c27627",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7400}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0750f93f-7d83-4899-96d4-1f385ae8c117",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.\\_30BbATRhFv3V83DHNDjJAO",
+      "targets": [
+        ["css=.\\_30BbATRhFv3V83DHNDjJAO", "css:finder"],
+        ["xpath=//div[@id='SHORTCUT_FOCUSABLE_DIV']/div/header/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "724b7fd6-ea70-4375-80b3-924abdd94fbd",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.\\_30BbATRhFv3V83DHNDjJAO",
+      "targets": [
+        ["css=.\\_30BbATRhFv3V83DHNDjJAO", "css:finder"],
+        ["xpath=//div[@id='SHORTCUT_FOCUSABLE_DIV']/div/header/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d9415f2-1092-454f-872a-a38749b44778",
+      "comment": "",
+      "command": "click",
+      "target": "css=path:nth-child(6)",
+      "targets": [
+        ["css=path:nth-child(6)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfc6b5e6-fa07-4fdf-bf91-eee55a2bc193",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acccc770-ddd2-4aee-8d11-5d2a5f9b8376",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "124a13bc-71d0-4fba-8609-7246e289d890",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "802bf5c9-35ff-4c7d-905d-c158f1661137",
+    "name": "Sign Up for Newsletters",
+    "commands": [{
+      "id": "d77a1148-df5f-4d61-9c9c-3828f07afb14",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e52079b-b866-48fa-b797-3f89a7e1fc1a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99aa3a92-c285-49cb-8930-157bcdabf2c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo:nth-child(2) > img",
+      "targets": [
+        ["css=.logo:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[@alt='Nasa']", "xpath:img"],
+        ["xpath=//nav[@id='navbar-nasa']/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7846340-ab38-409c-9ae0-a045fa2e547c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(5) span:nth-child(1)",
+      "targets": [
+        ["css=.dropdown:nth-child(5) span:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='nasa-main-menu']/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Follow NASA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55db169f-d99f-4f27-9833-ce17718205cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.open span:nth-child(1)",
+      "targets": [
+        ["css=.open span:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='nasa-main-menu']/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Follow NASA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8bc3244-3f14-42e3-90d4-072ad0da1c25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown:nth-child(5) span:nth-child(1)",
+      "targets": [
+        ["css=.dropdown:nth-child(5) span:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='nasa-main-menu']/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Follow NASA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cbbc06a-c22f-4ddd-bd26-c05d87e98d95",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='ember20']/div/p[4]/a",
+      "targets": [
+        ["linkText=NASA Explore", "linkText"],
+        ["css=p:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'NASA Explore')]", "xpath:link"],
+        ["xpath=//div[@id='ember20']/div/p[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.nasa.gov/specials/newsletter-sign-up/')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'NASA Explore')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c00821f-cbcf-4c31-ab26-a569722a7b8e",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.field:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2990b1e1-516f-42ac-9a62-60be64959247",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.field:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test@gmail.com"
+    }, {
+      "id": "d7dbd6b1-6dcd-48d7-bdeb-28b532dec056",
+      "comment": "",
+      "command": "click",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.field:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5580812d-1ac6-42f0-b40f-225401219d24",
+      "comment": "",
+      "command": "type",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.field:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Anna"
+    }, {
+      "id": "4dcb370b-06af-4385-bdfb-8da147811208",
+      "comment": "",
+      "command": "click",
+      "target": "name=last_name",
+      "targets": [
+        ["name=last_name", "name"],
+        ["css=.field:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='last_name']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26bfcf13-09f1-4bce-9cb9-30411fabda15",
+      "comment": "",
+      "command": "type",
+      "target": "name=last_name",
+      "targets": [
+        ["name=last_name", "name"],
+        ["css=.field:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='last_name']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Lee"
+    }, {
+      "id": "584ae0a8-3dcb-4998-907a-a6ca36d4f69c",
+      "comment": "",
+      "command": "click",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=.field:nth-child(4) > input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40a6c8b4-a0bf-4006-b438-f5681e6959cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=.field:nth-child(4) > input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Brooklyn"
+    }, {
+      "id": "c57d52c0-9bab-4758-bd5b-97f8dfb7812d",
+      "comment": "",
+      "command": "click",
+      "target": "name=state",
+      "targets": [
+        ["name=state", "name"],
+        ["css=.field:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='state']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "311e0b54-b2d2-4858-8377-d7fc85be05fc",
+      "comment": "",
+      "command": "type",
+      "target": "name=state",
+      "targets": [
+        ["name=state", "name"],
+        ["css=.field:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='state']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "NY"
+    }, {
+      "id": "8d91ada4-adbd-478c-88b8-9b560fc851c3",
+      "comment": "",
+      "command": "click",
+      "target": "name=postal_code",
+      "targets": [
+        ["name=postal_code", "name"],
+        ["css=.field:nth-child(6) > input", "css:finder"],
+        ["xpath=//input[@name='postal_code']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0be7891-de48-4a87-8f83-63d40273d11b",
+      "comment": "",
+      "command": "type",
+      "target": "name=postal_code",
+      "targets": [
+        ["name=postal_code", "name"],
+        ["css=.field:nth-child(6) > input", "css:finder"],
+        ["xpath=//input[@name='postal_code']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "11235"
+    }, {
+      "id": "e54dc54a-a09d-4617-9e25-81aadf3f940c",
+      "comment": "",
+      "command": "click",
+      "target": "name=country",
+      "targets": [
+        ["name=country", "name"],
+        ["css=.field:nth-child(7) > input", "css:finder"],
+        ["xpath=//input[@name='country']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a90f7dfa-14f0-47ef-9a59-e47708749712",
+      "comment": "",
+      "command": "type",
+      "target": "name=country",
+      "targets": [
+        ["name=country", "name"],
+        ["css=.field:nth-child(7) > input", "css:finder"],
+        ["xpath=//input[@name='country']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "USA"
+    }, {
+      "id": "48c2895f-9d58-4c54-ab9a-2d68fa5f269a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button_link",
+      "targets": [
+        ["css=.button_link", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Subscribe')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff46ef64-1a14-4812-8715-9f56dd18c42a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "49817d6e-9cbd-4f8f-8ce5-e3bd8704b10d",
+    "name": "NASA Project",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0eaea819-3247-40ff-8099-4b733f39ca0e", "73e64ca7-3cd9-479f-8c5d-8d2b2a31a275", "7441f173-131a-4e41-b620-505ccf2f2851", "802bf5c9-35ff-4c7d-905d-c158f1661137", "556bd59f-bbf8-4659-a42f-e0ae13c86a88"]
+  }],
+  "urls": ["https://www.nasa.gov/"],
+  "plugins": []
+}
